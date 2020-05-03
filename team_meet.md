@@ -6,7 +6,7 @@ Problem 12: Extracting Flood Depths from Imagery
 
 Problem Statement: Floods cause damage to infrastructure and homes. The depth of flood waters is a good indicator of the severity of damage. Floods are incredibly difficult to model, and while model outputs are useful to emergency managers, it is crucial to know the actual depth. Social media and news outlets often present pictures of floods. 
 
-**How can this imagery be used to estimate the depth of water in a given area?
+**How can this imagery be used to estimate the depth of water in a given area?**
 
 Proposed Deliverables:
 
@@ -26,16 +26,16 @@ Traffic cameras
 Google Street View (“normal” imagery)
 
 
-Input: Some image with water level
+Input: **Some image with water level**
 
-Output: Approximate the depth of the level base on the picture. 
+Output: **Approximate the depth of the level base on the picture.**
 
 
 ### Ideas for data collections
 
 - Since is from a corporation from Washington DC. Choose a City with histories of frequent flooding. 
 
-- City Target: **New Orleans** for **Hurriance Katarina
+- City Target: **New Orleans** for **Hurriance Katarina.**
 
 - Find images before and during the flood.
 
