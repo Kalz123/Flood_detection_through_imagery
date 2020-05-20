@@ -1,8 +1,11 @@
 # Flood Detection Through Imagery
 
+By: Scott Armstrong, Faisal Kalema, and Richard Ling
+General Assembly DSI-11 2020 Project #5 (Client Project with New Light Technologies)
+05/15/20
+
 ## Overview / Problem Statement
 With the advanced technologies we currently have, pictures of anything can be spread very quickly around the world. In the event of a flood, we can see pictures of the food as it is happening. These pictures can show us the situation of the flood and its damages.  Thus, if these images can show a severity level about the flood, it can give a first-hand notice to those who may be impacted to have early preparation. This leads to our problem statement: Can we use images to detect flooding and its severity?
-
 
 ### Data Collection
 #### New York Times API
