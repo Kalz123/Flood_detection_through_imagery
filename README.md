@@ -33,7 +33,7 @@ School Bus at level 1:
 ![school bus level 1 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/school_bus.png)
 
 People at level 2:
-![people level 2 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/people.png
+![people level 2 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/people.png)
 
 
 ### Flood Detection Model
