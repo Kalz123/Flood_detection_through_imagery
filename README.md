@@ -1,7 +1,15 @@
 # Flood Detection Through Imagery
 
-By: Scott Armstrong, Faisal Kalema, and Richard Ling
+By 
+
+Scott Armstrong ([personal github](https://github.com/Eeyle), [linkedin](https://www.linkedin.com/in/sc-armstrong/), [GA enterprise github](https://git.generalassemb.ly/eeyle))
+
+Faisal Kalema ([personal github](https://github.com/Kalz123), [linkedin](https://www.linkedin.com/in/faisalkalema/), [GA enterprise github](https://git.generalassemb.ly/FAISAL123))
+
+Richard Ling ([personal github](https://github.com/rich808), [linkedin](https://www.linkedin.com/in/richardzling/), [GA enterprise github](https://git.generalassemb.ly/Rich88))
+
 General Assembly DSI-11 2020 Project #5 (Client Project with New Light Technologies)
+
 05/15/20
 
 ## Overview / Problem Statement
