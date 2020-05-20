@@ -13,7 +13,8 @@ By searching for “hurricane Katrina” from [getty images](https://www.gettyim
 ### Data Cleaning
 In this section, we discarded all the images that were irrelevant or unrelated to the flood (for the image detection problem) and images where the object levels were not clear (e.g images from an aerial view).
 
-![clean data example ](https://git.generalassemb.ly/eeyle/client-project/tree/master/label_examples/data_clean.png)
+
+![clean data example ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/data_clean.png)
 
 For the classification problem however, we kept both images related to the flood and other unrelated random images so that we could test on non-flood images as well.
 
@@ -21,15 +22,19 @@ For the classification problem however, we kept both images related to the flood
 Using the [labelImg](https://github.com/tzutalin/labelImg) application, Four levels (level 1, level 2, level 3, level 4) were assigned to 3 different types of objects: Human beings, Cars and Houses; where level 1 represents a deep flood, which is about 60 inches and above for an average human being, Level 2 is the waist level that represents an average flood, level 3 is the knee level and level 1 being the shallowest flood around the ankle. The same idea for the cars and houses was applied. 
 
 Label Criteria for car and human:
-![label criteria for car and human ](https://git.generalassemb.ly/eeyle/client-project/tree/master/label_examples/label_criteria.png)
+
+![label criteria for car and human ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/label_criteria.png)
+
 
 Label Examples:
 
 School Bus at level 1:
-![school bus level 1 ](https://git.generalassemb.ly/eeyle/client-project/tree/master/label_examples/school_bus.png)
+
+![school bus level 1 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/school_bus.png)
 
 People at level 2:
-![people level 2 ](https://git.generalassemb.ly/eeyle/client-project/tree/master/label_examples/people.png)
+![people level 2 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/people.png
+
 
 ### Flood Detection Model
 At the time of this project, we couldn’t fully build an image detection model due to time constraints plus we had not yet covered neural networks. Therefore, we used a pre-trained model by [Joseph Nelson](https://www.linkedin.com/in/josephofiowa/) called [RoboFlow](https://models.roboflow.ai/object-detection/yolo-v3-pytorch) in [Google Colab](https://colab.research.google.com/drive/1ntAL_zI68xfvZ4uCSAF6XT27g0U4mZbW#scrollTo=IaVwHzdprdSN) to execute the concepts and ideas of this problem statement.  
