@@ -25,7 +25,7 @@ By searching for “hurricane Katrina” from [getty images](https://www.gettyim
 In this section, we discarded all the images that were irrelevant or unrelated to the flood (for the image detection problem) and images where the object levels were not clear (e.g images from an aerial view).
 
 
-![clean data example ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/data_clean.png)
+![clean data example ](label_examples/data_clean.png)
 
 For the classification problem however, we kept both images related to the flood and other unrelated random images so that we could test on non-flood images as well.
 
