@@ -34,17 +34,17 @@ Using the [labelImg](https://github.com/tzutalin/labelImg) application, Four lev
 
 Label Criteria for car and human:
 
-![label criteria for car and human ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/label_criteria.png)
+![label criteria for car and human ](label_examples/label_criteria.png)
 
 
 Label Examples:
 
 School Bus at level 1:
 
-![school bus level 1 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/school_bus.png)
+![school bus level 1 ](label_examples/school_bus.png)
 
 People at level 2:
-![people level 2 ](https://git.generalassemb.ly/eeyle/client-project/blob/master/label_examples/people.png)
+![people level 2 ](label_examples/people.png)
 
 
 ### Flood Detection Model
@@ -59,35 +59,35 @@ A similar image augmentation process was used for training classification. Image
 
 Several models were tried, but the only model that achieved the best performance was a MLP neural network. The model performed the best with the widest possible base, so the first hidden layer contained 128 nodes compared to the 1024 input features. The second hidden layer contained 16 nodes before collapsing into the result of flooded or not flooded. 
 
-The model can be found encapsulated in the class [FloodImageClassifier.py](https://git.generalassemb.ly/eeyle/client-project/blob/master/code/FloodImageClassifier.py) in the `code` directory. This class implements a `predict` method but no `fit` method nor others, so it's not a proper Scikit-Learn estimator. The class loads a pre-fit version of the model, saved to a separate file [binary_images/flood_image_classifier_mlp_128_16.sav](https://git.generalassemb.ly/eeyle/client-project/blob/master/binary_images/flood_image_classifier_mlp_128_16.sav).
+The model can be found encapsulated in the class [FloodImageClassifier.py](code/FloodImageClassifier.py) in the `code` directory. This class implements a `predict` method but no `fit` method nor others, so it's not a proper Scikit-Learn estimator. The class loads a pre-fit version of the model, saved to a separate file [binary_images/flood_image_classifier_mlp_128_16.sav](binary_images/flood_image_classifier_mlp_128_16.sav).
 
 ### Results
 #### Flood Detection Model
 In a total of 60 pictures, it was able to detect objects in 48 of the images due to insufficient images to the train data. In those 48 images, it labeled a total of 88 objects and correctly labeled 66 of those objects.  
 
-![pic 51](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic51.png)
+![pic 51](results_pic/pic51.png)
 
 The model was able to detect the bus was partially covered, although it sunk into the ground and not covered by water.
 
-![pic 54](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic54.png)
+![pic 54](results_pic/pic54.png)
 
 The model correctly detected each individual with water at around their ankles.
 
-![pic 30](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic30.png)
+![pic 30](results_pic/pic30.png)
 
 The models correctly detected the car at the side of the image but misclassified the person in the middle. Although it was misclassified, it was within reasonable range of level 4 and not level 2.  
 
-![pic 22](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic22.png)
+![pic 22](results_pic/pic22.png)
 
 It correctly detected the unflooded dome but not the structure below the dome because we didn’t have enough images for the complete dome. 
 For the people, it was difficult for human eyes to visualize the levels but it was still able to assign a reasonable level to them, considering the water was somewhere between the waist and the knee of the individual. 
 
-![pic 49](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic49.png)
+![pic 49](results_pic/pic49.png)
 
 Due to the lack of images to train the model to recognize the dome, it wasn’t able to detect the dome in this image.
 The cars were correctly classified with correct levels. 
 
-![pic 29](https://git.generalassemb.ly/eeyle/client-project/blob/master/results_pic/pic29.png)
+![pic 29](results_pic/pic29.png)
 
 The person on the left was misclassified, possibly due to the reflection on the water. 
 The person in the middle was misclassified but correct in its context because we didn’t train the model to recognize the boat. 
@@ -100,11 +100,11 @@ When testing, however, the model was not as accurate. This was expected because 
 
 It's suspected that the model is picking up on large amounts of water in the bottom half of the image.
 
- ![Test image 25](https://git.generalassemb.ly/eeyle/client-project/blob/master/binary_images/test_images/img_test_25.jpg) 
+ ![Test image 25](binary_images/test_images/img_test_25.jpg) 
 
 The above image is a good example of this, where the model classifies the ocean as being a flood. Images where the floodwater is located in the top half of the image such as the following image
 
-![test image 35](https://git.generalassemb.ly/eeyle/client-project/blob/master/binary_images/test_images/img_test_35.jpg) 
+![test image 35](binary_images/test_images/img_test_35.jpg) 
 
 were particularly prone to being false negatives. Overall though, the model did well at distinguishing when an image was of a person/house/dog and when an image was of a proper flood. The model will perform extremely poorly when distinguishing between boats/oceans/rivers and floods, but is decent at distinguishing between people/animals and floods, meaning that it could be used to filter data that has been mass-scraped from social media as long as the scraping was already searching for flooding.
 
